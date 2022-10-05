@@ -1,7 +1,5 @@
-from sklearn.datasets import load_breast_cancer, load_svmlight_file
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_svmlight_file
 from sklearn.model_selection import train_test_split
-from sklearn.datasets import fetch_openml
 
 import os
 import dill

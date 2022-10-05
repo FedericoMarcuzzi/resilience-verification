@@ -2,7 +2,6 @@ from misc import *
 import sys
 import pandas as pd
 from pathlib import Path
-from sklearn.tree import DecisionTreeClassifier
 
 '''
 Parametri dello script:
