@@ -2,6 +2,7 @@ from misc import *
 import sys
 import pandas as pd
 from pathlib import Path
+from sklearn.ensemble import RandomForestClassifier
 
 '''
 Parametri dello script:

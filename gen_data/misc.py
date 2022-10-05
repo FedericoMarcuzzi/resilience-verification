@@ -1,12 +1,9 @@
 from sklearn.datasets import load_svmlight_file
 from sklearn.model_selection import train_test_split
 
-import os
-import dill
 import numpy as np
 import pandas as pd
 import json
-import sys
 
 SEED = 7
 
@@ -147,8 +144,6 @@ def sklearn_to_json(trees, dim, filename):
 
     with open(filename, 'w') as f:
         f.write(str_to_json(ensamble, dim))
-
-
 
 
 
