@@ -1,12 +1,12 @@
 # Resilience Verification
 
-This repository contains the implementation of the data-independent stability analysis for decision-tree ensembles proposed by **Calzavara et. al.** in their research paper entitled [<em>Beyond Robustness: Resilience Verification of Tree-Based Classifiers</em>](https://www.sciencedirect.com/science/article/pii/S0167404822002371). This repository contains also the code and the scripts to reproduce the experiments described in the paper.
+This repository contains the implementation of the data-independent stability analysis for decision-tree ensembles proposed by **Calzavara et. al.** in their research paper entitled [<em>Beyond Robustness: Resilience Verification of Tree-Based Classifiers</em>](https://www.sciencedirect.com/science/article/pii/S0167404822002371). This repository also contains the code and the scripts to reproduce the experiments described in the paper.
 
 ## Installation
 Download the repository. Remember to compile using the flags <em>-Iinclude</em> and <em>-lpthread</em> to use the analyzer.
 
 ### Requirments
-The following requirements are necessary to use the analyzer. For reproducibility reasons, specific versions of the library are required.
+The following requirements are necessary to use the analyzer. For reproducibility reasons, specific versions of the libraries are required.
 - Python3
 - C++14 compiler
 - sklearn (version 0.23.2 used for the experiments)
@@ -34,20 +34,20 @@ The program requires these arguments:
 ./analyze <ensemble_filename.json> <attacker_filename.json> <attacker_budget >= 0> <test_set_filename.json> <num iter > 0> <n_threads > 1> <iterations_x_dump > 0> <noises (divided by -)> <closed_interval_noise> <seed>
 ```
 The specific parameters are:
-- <em>ensemble_filename.json</em>: the json file containing the structure of the tree-based classifier. It's possible to train a specific tree-based ensemble and obtain the classifier in the json format by using the scripts random_forest.py and treant.py in the gen_data folder as follows:
+- <em>ensemble_filename.json</em>: the JSON file containing the structure of the tree-based classifier. It's possible to train a specific tree-based ensemble and obtain the classifier in the JSON format by using the scripts random_forest.py and treant.py in the gen_data folder as follows:
   ```bash
   ./python3 random_forest.py <dataset_abbreviation> <train_size> <n_trees> <max_depth>
 
   ./python3 treant.py <dataset_abbreviation> <n_trees> <max_depth> <budget> <perturbation>
   ```
   See some examples in gen_data/train_random_forest.sh and gen_data/train_treant.sh. Moreover, see the available dataset abbreviations in the two scripts random_forest.py and treant.py.
-- <em>attacker_filename.json</em>: the json file specifying the attack interval per feature. It's possible to generate an attack file by using the script atk_gen.py in the gen_data folder as follows:
+- <em>attacker_filename.json</em>: the JSON file specifying the attack interval per feature. It's possible to generate an attack file by using the script atk_gen.py in the gen_data folder as follows:
   ```bash
   python3 atk_gen.py <dataset_abbreviation> <atk_magnitude> <atk only left direction (l), only right direction (r) or both (b)>
   ```
   See some examples in gen_data/gen\_analyzer\_atk.sh
 - <em>attacker_budget</em>: a natural number that specifies the attacker's budget.
-- <em>test_set_filename.json</em>: test set file in json format. The test set is automatically generated from the original dataset when you train a random forest on the dataset. In particular, the command:
+- <em>test_set_filename.json</em>: test set file in JSON format. The test set is automatically generated from the original dataset when you train a random forest on the dataset. In particular, the command:
   ```bash
     ./python3 random_forest.py <dataset_abbreviation> <train_size> <n_trees> <max_depth>
   ```
