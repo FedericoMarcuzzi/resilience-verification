@@ -85,9 +85,9 @@ To perform the experiments on the synthetic datasets, you must execute the bash 
 
 ## Credit
 
-if you use this implementation in your work, please add a reference/citation to our paper. You can use the following BibTeX entry:
+If you use this implementation in your work, please add a reference/citation to our paper. You can use the following BibTeX entry:
 
-```bash
+```
 @article{CalzavaraCLMO22,
   author    = {Stefano Calzavara and
                Lorenzo Cazzaro and
