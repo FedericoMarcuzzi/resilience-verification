@@ -1,6 +1,6 @@
 # Resilience Verification
 
-This repository contains the implementation of the data-independent stability analysis for decision-tree ensembles proposed by **Calzavara et. al.** in their research paper entitled [<em>Beyond Robustness: Resilience Verification of Tree-Based Classifiers</em>](https://www.sciencedirect.com/science/article/pii/S0167404822002371). This repository also contains the code and the scripts to reproduce the experiments described in the paper.
+This repository contains the implementation of the data-independent stability analysis for decision-tree ensembles proposed by **Calzavara *et. al.*** in their research paper entitled [<em>Beyond Robustness: Resilience Verification of Tree-Based Classifiers</em>](https://www.sciencedirect.com/science/article/pii/S0167404822002371). This repository also contains the code and the scripts to reproduce the experiments described in the paper.
 
 ## Installation
 Download the repository. Remember to compile using the flags <em>-Iinclude</em> and <em>-lpthread</em> to use the analyzer.
