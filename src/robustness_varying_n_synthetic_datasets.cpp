@@ -19,7 +19,7 @@ size_t counts_true(vector<bool> v) {
 }
 
 int main(int argc, char* argv[]) {
-    if (argc != 8) {
+    if (argc != 7) {
         std::cout << "./executable <ensemble_filename.json> <attacker_filename.json> <attacker_budget >= 0> <test_set_path> <test_set_filename.json> <noise>" << std::endl;
         return -1;
     }
